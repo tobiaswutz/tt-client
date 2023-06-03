@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HostComponent } from './host.component';
 import { DashboardComponent } from 'src/app/components/dashboard/dashboard.component';
 import { PortfolioComponent } from 'src/app/components/portfolio/portfolio.component';
+import { authGuard } from 'src/app/guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: '', component: HostComponent,
+    path: '', component: HostComponent, canActivateChild: [authGuard],
     children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
       {
         path: 'portfolios', component: PortfolioComponent,

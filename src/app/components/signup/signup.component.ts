@@ -29,7 +29,7 @@ export class SignupComponent {
       email: '',
       name: '',
       password: '',
-      applicationId: '',
+      applicationId: '894436ac-888e-41ae-a832-d1f4d11cc948',
       initialUser: false
     };
   }

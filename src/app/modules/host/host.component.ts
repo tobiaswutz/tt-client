@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-host',
@@ -13,7 +14,10 @@ export class HostComponent {
 
   constructor(
     private _router: Router,
-  ) { }
+    private _authService: AuthService,
+  ) {
+    this._authService.init();
+  }
 
   public ngOnInit(): void {
     this.breadCrumbs = this.getBreadCrumb(this._router.url);
