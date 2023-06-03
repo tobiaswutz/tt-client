@@ -2,23 +2,23 @@
   <form class="flex flex-col w-1/2 gap-2" (ngSubmit)="signup()">
     <div class="flex flex-row justify-between items-center">
       <label for="email">Email:</label>
-      <input class="border-black border w-1/2 p-1" type="email" id="email" [(ngModel)]="email" name="email" required>
+      <input class="border-black border w-1/2 p-1" type="email" id="email" [(ngModel)]="signupData.email" name="email" required>
     </div>
     <div class="flex flex-row justify-between items-center">
       <label for="name">Name:</label>
-      <input class="border-black border w-1/2 p-1" type="text" id="name" [(ngModel)]="name" name="name" required>
+      <input class="border-black border w-1/2 p-1" type="text" id="name" [(ngModel)]="signupData.name" name="name" required>
     </div>
     <div class="flex flex-row justify-between items-center">
       <label for="password">Password:</label>
-      <input class="border-black border w-1/2 p-1" type="password" id="password" [(ngModel)]="password" name="password" required>
+      <input class="border-black border w-1/2 p-1" type="password" id="password" [(ngModel)]="signupData.password" name="password" required>
     </div>
     <div class="flex flex-row justify-between items-center">
       <label for="applicationId">Application ID:</label>
-      <input class="border-black border w-1/2 p-1" type="text" id="applicationId" [(ngModel)]="applicationId" name="applicationId" required>
+      <input class="border-black border w-1/2 p-1" type="text" id="applicationId" [(ngModel)]="signupData.applicationId" name="applicationId" required>
     </div>
     <div class="flex flex-row justify-between items-center">
       <label for="initialUser">Initial User:</label>
-      <input class="border-black border w-1/2 p-1" type="checkbox" id="initialUser" [(ngModel)]="initialUser" name="initialUser">
+      <input class="border-black border w-1/2 p-1" type="checkbox" id="initialUser" [(ngModel)]="signupData.initialUser" name="initialUser">
     </div>
     <button class="p-4 bg-black text-white shadow-lg hover:shadow-2xl rounded-lg" type="submit">Sign Up</button>
     <button ibmButton type="submit">Sign Up</button>

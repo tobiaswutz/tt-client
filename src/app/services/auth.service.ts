@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
+import { SignupData } from '../components/signup/signup.component';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,7 @@ export class AuthService {
   ) { }
 
 
-  public async signup(email: string, name: string, password: string, applicationId: string, initialUser: boolean) {
-    const data = {
-      email: email,
-      name: name,
-      password: password,
-      applicationId: applicationId,
-      initialUser: initialUser
-    };
-
+  public async signup(data: SignupData) {
     const response = await this._apiService.postCall<any>('api/users', data);
     console.log('Response:', response);
   }
