@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<div class="mb-4 bg-gray-950 h-10 text-white flex items-center px-4 sm:px-6 lg:px-8 font-semibold font-mono">
+  <span *ngFor="let item of breadCrumbs; let i = index">
+    <a [routerLink]="item" class="text-white hover:text-gray-400">{{item | titlecase}}</a>
+    <span *ngIf="i < breadCrumbs.length - 1" class="text-white px-1">/</span>
+  </span>
+</div>
+<div class="m-6">
+  <router-outlet></router-outlet>
+</div>
+

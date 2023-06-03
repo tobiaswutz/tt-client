@@ -1,0 +1,15 @@
+<button (click)="modal.showModal()" type="button" class="rounded-md mt-6 bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Neues Portfolio erstellen</button>
+
+
+<dialog class="bg-white rounded-lg p-4" #modal>
+  <span>ERSTELLEN SIE EIN NEUES PORTFOLIO ✍️✍️✍️</span>
+  <form class="flex flex-col justify-between" method="dialog">
+    <div>
+      <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
+      <div class="mt-2">
+        <input type="text" name="email" id="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="you@example.com">
+      </div>
+    </div>
+    <button (click)="modal.close()" type="button" class="rounded-md mt-6 bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Portfolio erstellen</button>
+  </form>
+</dialog>

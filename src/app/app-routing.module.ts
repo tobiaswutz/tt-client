@@ -6,6 +6,7 @@ import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'host', loadChildren: () => import('./modules/host/host.module').then(m => m.HostModule) },
 ];
 
 @NgModule({
