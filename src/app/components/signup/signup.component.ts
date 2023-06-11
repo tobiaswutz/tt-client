@@ -4,11 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 
 export interface SignupData {
-  email: string;
-  name: string;
+  username: string;
   password: string;
-  applicationId: string;
-  initialUser: boolean;
 }
 
 @Component({
@@ -26,11 +23,8 @@ export class SignupComponent {
     private _authService: AuthService,
   ) {
     this.signupData = {
-      email: '',
-      name: '',
+      username: '',
       password: '',
-      applicationId: '894436ac-888e-41ae-a832-d1f4d11cc948',
-      initialUser: false
     };
   }
 

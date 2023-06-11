@@ -5,9 +5,8 @@ import { SignupData } from '../signup/signup.component';
 import { FormsModule } from '@angular/forms';
 
 export interface LoginData {
-  email: string;
+  username: string;
   password: string;
-  applicationId: string;
 }
 
 
@@ -26,9 +25,8 @@ export class LoginComponent {
     private _authService: AuthService,
   ) {
     this.loginData = {
-      email: '',
+      username: '',
       password: '',
-      applicationId: '894436ac-888e-41ae-a832-d1f4d11cc948',
     };
   }
 

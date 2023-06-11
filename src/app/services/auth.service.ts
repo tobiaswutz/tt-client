@@ -47,8 +47,10 @@ export class AuthService {
     return null;
   }
 
+
   public async signup(data: SignupData) {
-    const response = await this._apiService.postCall<any>('api/users', data);
+    alert('signup');
+    const response = await this._apiService.postCall<any>('api/users/register', data);
     console.log('Response:', response);
   }
 
