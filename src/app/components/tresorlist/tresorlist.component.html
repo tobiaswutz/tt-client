@@ -1,0 +1,31 @@
+<button (click)="modal.showModal()" type="button" class="rounded-md mt-6 bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Create new Tresor</button>
+
+
+<dialog class="bg-blue-950 text-white rounded-lg p-4" #modal>
+  <div class="min-w-[40vw] flex flex-col items-center align-middle">
+    <div class="text-7xl mx-auto mb-6">🔒</div>
+    <span class="text-2xl mx-auto mb-6">Einen neuen Tresor erstellen</span>
+    <form class="flex flex-col w-full justify-between gap-4" method="dialog">
+      <div>
+        <label for="email" class="block text-sm font-medium leading-6">Name</label>
+        <div class="mt-2"><input type="text" name="email" id="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="you@example.com"></div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium leading-6">Name</label>
+        <div class="mt-2"><input type="text" name="email" id="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="you@example.com"></div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium leading-6">Name</label>
+        <div class="mt-2"><input type="text" name="email" id="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="you@example.com"></div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium leading-6">Name</label>
+        <div class="mt-2"><input type="text" name="email" id="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="you@example.com"></div>
+      </div>
+      <button (click)="modal.close()" type="button" class="rounded-md mt-6 bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Portfolio erstellen</button>
+    </form>
+  </div>
+</dialog>
