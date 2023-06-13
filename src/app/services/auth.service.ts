@@ -64,6 +64,7 @@ export class AuthService {
 
         // Überprüfen Sie das Ablaufdatum des Tokens
         if (decodedToken.exp && decodedToken.exp > currentTime) {
+          this._apiService.setToken(token);
           return true; // Gültiges Token
         }
       } catch (error) {
@@ -80,13 +81,13 @@ export class AuthService {
       localStorage.setItem('tt-token', response.token);
       this.user = jwtDecode(response.token);
       this._router.navigate(['/host']);
-      // this._apiService.setToken(response.token);
+      this._apiService.setToken(response.token);
     }
   }
 
   public logout() {
     localStorage.removeItem('tt-token');
     this._router.navigate(['/login']);
-    // this._apiService.setToken(null);
+    this._apiService.setToken(null);
   }
 }

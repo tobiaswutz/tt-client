@@ -55,12 +55,12 @@ export class ApiService {
     );
   }
 
-  // private getHeaders(): HttpHeaders {
-  //   return new HttpHeaders({
-  //     'Content-Type': 'application/json',
-  //     'Authorization': this.token ? `Bearer ${this.token}` : ''
-  //   });
-  // }
+  private getHeaders(): HttpHeaders {
+    return new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': this.token ? `Bearer ${this.token}` : ''
+    });
+  }
 
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage = '';

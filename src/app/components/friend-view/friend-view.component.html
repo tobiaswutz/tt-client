@@ -2,4 +2,43 @@
   <label for="password">Username:</label>
   <input #searchusername class="border-black border w-1/2 p-1" type="text" id="username" name="password" required>
 </div>
-<button class="p-4 bg-black text-white shadow-lg hover:shadow-2xl rounded-lg" (click)="sendFriendRequest(searchusername.value)">Get Friend</button>
+<button class="p-4 mb-10 bg-black text-white shadow-lg hover:shadow-2xl rounded-lg" (click)="sendFriendRequest(searchusername.value)">Get Friend</button>
+
+
+<div class="flex flex-row gap-4 w-full justify-evenly">
+
+  <div class="flex flex-col bg-slate-700 p-4 pt-2 w-full rounded-lg text-white shadow-xl">
+    <span class="text-lg mb-2">Freunde:</span>
+    <div *ngFor="let friend of myFriends" class="w-full h-8 bg-white text-black flex items-center justify-between rounded-md p-2 shadow-xl mb-2">
+      <span>{{friend.username}}</span>
+      <div>
+        <app-button class="mr-2" text="add" size="xs"></app-button>
+        <app-button text="remove" size="xs"></app-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col bg-slate-700 p-4 pt-2 w-full rounded-lg text-white shadow-xl">
+    <span class="text-lg mb-2">Freundschaftsanfragen:</span>
+    <div *ngFor="let req of friendRequests" class="w-full h-8 bg-white text-black flex items-center justify-between rounded-md p-2 shadow-xl mb-2">
+      <span>{{req.senderUsername}}</span>
+      <div>
+        <app-button class="mr-2" text="add" size="xs"></app-button>
+        <app-button text="remove" size="xs"></app-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col bg-slate-700 p-4 pt-2 w-full rounded-lg text-white shadow-xl">
+    <span class="text-lg mb-2">Freundschaftsanfragen gesendet:</span>
+    <div *ngFor="let req of sentFriendRequests" class="w-full h-8 bg-white text-black flex items-center justify-between rounded-md p-2 shadow-xl mb-2">
+      <span>{{req.receiverUsername}}</span>
+      <div>
+        <app-button class="mr-2" text="add" size="xs"></app-button>
+        <app-button text="remove" size="xs"></app-button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
